@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     height: 328vh;
-    background: linear-gradient(to bottom, black 70%, rgb(40, 40, 40));
+    background: black;
     z-index: -2;
   }
   

@@ -1,5 +1,5 @@
 // psaní textu Welcome
-const text = "Welcome to my world... Coding. Creativity. Chaos.";
+const text = "Welcome to my Chaos.";
 let index = 0;
 
 function type() {
@@ -11,7 +11,6 @@ function type() {
 }
 
 setTimeout(type, 1500);
-
 // oživení about-me-box při scrollování
 document.addEventListener('DOMContentLoaded', function () {
   const aboutMeBox = document.querySelector('.about-me-box');
@@ -26,8 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   observer.observe(aboutMeBox);
 });
-
-
 // Funkce pro inicializaci particles
 function initParticles() {
     if (window.pJSDom && window.pJSDom.length > 0) {
@@ -128,11 +125,6 @@ function initParticles() {
   window.addEventListener('resize', function () {
     initParticles();
   });
-  
-  
-  
-
-
   document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.card');
   
@@ -150,7 +142,3 @@ function initParticles() {
       observer.observe(card);
     });
   });
-  
-
-  
-  

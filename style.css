@@ -69,7 +69,7 @@ body {
   hr {
     border: none;
     height: 3px;
-    width: 50%;
+    width: 30%;
     margin: 10px auto 0;
     background: linear-gradient(to right, red, rgb(175, 175, 175), red);
     opacity: 0;
@@ -104,7 +104,7 @@ body {
     background: rgb(0, 0, 0);
     padding: 40px;
     border-radius: 50px;
-    width: 95vw;
+    width: 80vw;
     text-align: center;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
     opacity: 0;
@@ -164,18 +164,17 @@ body {
   }
   
   .projects-divider {
-    width: 1000px;
     height: 4px;
     background: red;
     border: none;
     margin: 0 auto 40px auto;
+    border-radius: 100px;
   }
   
   .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0px;
     margin-top: 50px;
   }
   
@@ -211,37 +210,16 @@ body {
     transform: translateY(-5px);
   }
   
-  
-  
-  
-  .card p {
-    margin: 0;
-    font-size: 20px;
-  }
-
-  .card {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease;
-  }
-  
   /* Když je karta vidět */
   .card.show {
     opacity: 1;
     transform: translateY(0);
   }
-  
-  
-  .card:hover {
-    background: transparent;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
-    transform: translateY(-5px);
-  }
-  
   /* contact */
   .contact-section {
     margin-top: 200px;
     text-align: center;
+    margin:auto;
   }
   
   .contact-section h2 {
@@ -249,7 +227,6 @@ body {
     color: red;
     font-size: 36px;
     margin-bottom: 10px;
-  
     opacity: 0; /* schováme na začátku */
     transform: translateY(20px); /* posun dolů */
     animation: slideDown 1s ease-out forwards;
@@ -328,37 +305,136 @@ body {
   
     .projects-section h2,
     .contact-section h2 {
-      font-size: 28px;
+      font-size: 20px;
     }
   }
-  
-  /* --- Mobil --- */
-  @media (max-width: 767px) {
-    .pad {
-      font-size: 2.5em;
-      letter-spacing: 2px;
-    }
-  
-    .typing-text {
-      font-size: 18px;
-    }
-  
-    .card {
-      width: 90%;
-      padding: 30px;
-    }
-  
-    .about-me-box {
-      width: 90%;
-      padding: 20px;
-    }
-  
-    .contact-info {
-      flex-direction: column;
-      gap: 20px;
-    }
+  /* --- Mobile Perfecting --- */
+@media (max-width: 600px) {
+  body {
+    height: auto;
   }
-  
+
+  .wrapper {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .pad {
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin: 100px auto 0 auto;
+  }
+
+  hr {
+    width: 80%;
+  }
+
+  .typing-text {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+
+  .about-me-box {
+    width: 90%;
+    padding: 20px;
+    margin-top: 400px;
+  }
+
+  .about-me-box h2 {
+    font-size: 24px;
+  }
+
+  .about-me-box p {
+    font-size: 16px;
+  }
+
+  .projects-section {
+    margin-top: 150px;
+  }
+
+  .projects-section h2 {
+    font-size: 28px;
+  }
+
+  .card {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .card img {
+    height: 140px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  .skills-wrapper {
+    margin-top: 100px;
+  }
+
+  .skills-title {
+    font-size: 28px;
+  }
+
+  .skills-divider {
+    width: 150px;
+  }
+
+  .skills-section {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+  }
+
+  .skill {
+    margin: 20px 0;
+  }
+
+  .outer {
+    width: 100px;
+    height: 100px;
+  }
+
+  .inner {
+    width: 60px;
+    height: 60px;
+  }
+
+  .percentage {
+    font-size: 20px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .contact-section {
+    margin-top: 150px;
+  }
+
+  .contact-section h2 {
+    font-size: 28px;
+  }
+
+  .contact-divider {
+    width: 200px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-info p {
+    font-size: 18px;
+  }
+
+  .contact-info i {
+    font-size: 20px;
+  }
+}
+
   /* --- Větší monitory (FullHD 1920px a více) --- */
   @media (min-width: 1400px) {
     .about-me-box {
@@ -368,12 +444,9 @@ body {
     }
   }
   
-  
-
-  
     .projects-section h2,
     .contact-section h2 {
-      font-size: 40px;
+      font-size: 20px;
     }
   
     .typing-text {
@@ -394,10 +467,9 @@ body {
     }
   }
   
-  
     .card {
       width: 350px;
-      padding: 40px 50px;
+      padding: 40px 20px;
       font-size: 28px;
     }
   
@@ -430,26 +502,13 @@ body {
   .card-link:hover {
     color: inherit; /* při hoveru taky zachová barvu */
   }
-
-
-
-
-
-
-
-
   .skills-section {
     display: flex;
     justify-content: center; 
     flex-wrap: wrap; /* když je málo místa, půjdou pod sebe */
-    gap: 50px; /* mezery mezi kolečky */
-    padding: 0 100px; /* trochu prostoru zleva i zprava */
+    gap: 20px; /* mezery mezi kolečky */
+    padding: 0 50px; /* trochu prostoru zleva i zprava */
   }
-  
-  
-
-
-
   .skill {
     position: relative;
     margin: 40px;
@@ -521,22 +580,21 @@ body {
   
   
   .skills-wrapper {
-    margin-top: 250px; /* odsazení od vršku */
+    margin-top: 200px; /* odsazení od vršku */
     text-align: center;
   }
   
   .skills-title {
     font-family: 'Goldman', sans-serif;
     color: red;
-    font-size: 46px;
-    margin-bottom: 10px;
+    font-size: 32px;
     opacity: 0;
     transform: translateY(50px);
     animation: slideDown 1s ease-out forwards;
   }
   
   .skills-divider {
-    width: 400px;
+    width: 200px;
     height: 4px;
     background: red;
     border: none;
@@ -572,6 +630,29 @@ body {
   
     .card p {
       font-size: 18px;
+    }
+  }
+  @media (max-width: 768px) {
+    .skills-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .load-letter {
+    font-size: 60px; /* default big size */
+    transition: font-size 0.3s ease; /* smooth resizing */
+  }
+  
+  /* Responsive shrinking */
+  @media (max-width: 768px) {
+    .load-letter {
+      font-size: 40px; /* smaller on tablets/phones */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .load-letter {
+      font-size: 50px; /* even smaller on very small screens */
     }
   }
   

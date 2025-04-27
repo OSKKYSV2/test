@@ -50,10 +50,6 @@ function eraseText() {
 }
 
 typeText();
-
-
-
-
 // ——————————————————————————————————————————————————
 // TextScramble
 // ——————————————————————————————————————————————————
@@ -147,23 +143,8 @@ window.addEventListener("scroll", function () {
   parallax.style.backgroundPositionY = offset * 0.7 + "px";
   // DIV 1 background will move slower than other elements on scroll.
 });
-
-
 const button = document.querySelector('.button');
 
 // Add a click event listener
 button.addEventListener('click', function() {
-
 });
-
-  // Define the action you want to perform when the button is clicked
-  //window.scrollTo({ 
-   // top: 870, // Počet pixelů, o které se stránka posune dolů
-   // left: 0, 
-   // behavior: 'smooth' 
-  //});
-
-
-
-
-

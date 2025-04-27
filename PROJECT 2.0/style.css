@@ -1,0 +1,287 @@
+Tbody {
+   background-color: rgb(180, 43, 226);
+   color: rgb(94, 0, 128);
+   -webkit-text-stroke: 1.5px rgb(191, 0, 255);
+   position: relative;
+   overflow-x: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100');
+
+html, body {
+  font-family: 'Roboto Mono', monospace;
+  height: 100%;
+}
+
+.container {
+position: absolute;
+top: -39%;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.text {
+  z-index: 2;
+  font-weight: 900;
+  font-size: 10rem;
+  color: rgb(150, 5, 198);
+}
+
+.dud {
+  color: rgb(150, 5, 198);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.parallax-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: Montserrat, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+.parallax-item:first-child {
+  background: url("https://cdnb.artstation.com/p/assets/images/images/053/131/961/original/sofia-ritter-city-scene-gif.gif?1661482695");
+  background-size: cover;
+}
+
+.parallax-item:nth-child(2) {
+  background: linear-gradient(to top, black  40%, rgb(75, 0, 100) 99%);
+  min-height: 780px;
+ 
+}
+
+.parallax-item:nth-child(3) {
+  background: url("https://www.icegif.com/wp-content/uploads/2023/05/icegif-11.gif");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax Effect for DIV 3 */
+  min-height: 1040px;
+}
+
+/*.parallax-item:nth-child(4) {
+  min-height: 120px;
+  background: rgb(0, 0, 0)
+}*/
+
+@media screen and (max-width: 768px) {
+  .parallax-item h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.h2a {
+  color: blueviolet;
+}
+
+.obdelnik {
+  z-index: 0;
+  width: 1500px;
+  height: 576px;
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  border-radius: 20px;
+  border: 1px solid rgb(150, 5, 198);
+  background: transparent;
+  backdrop-filter: blur(8px);
+}
+
+
+.inf {
+  color: transparent;
+  -webkit-text-stroke: 3px rgb(191, 0, 255);
+  font-family: Andale Mono, monospace;
+  font-size: 4rem;
+  position: absolute;
+  font-weight: 900;
+  top: 38%;
+  left: 36.3%;
+}
+
+.inf2 {
+  color: rgb(150, 5, 198);
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  font-family: Andale Mono, monospace;
+  font-size: 2rem;
+  position: absolute;
+  top: 40%;
+  left: 43.5%;
+}
+
+
+/*<---------------2STR-------------------->*/
+
+
+svg{
+  position: absolute;
+  top: 92%;
+  left: 60%;
+  height: 90%;
+  width: 50%;
+}
+
+.text2 {
+  -webkit-text-stroke: 3px rgb(150, 5, 198) ;
+  
+  font-family: Andale Mono, monospace;
+  font-weight: 900;
+  color: rgb(0, 0, 0);
+  font-size: 5rem;
+  position: absolute;
+  top: 104%;
+  left: 20.7%;
+}
+
+.obdelnik2 {
+  z-index: 0;
+  width: 300px;
+  height: 506px;
+  position: absolute;
+  top: 120%;
+  left: 5%;
+  border-radius: 20px;
+  border: 1px solid rgb(150, 5, 198);
+  background: linear-gradient(to top, rgb(81, 0, 108)  10%, black 40%);
+  backdrop-filter: blur(8px);
+}
+.obdelnik3 {
+  z-index: 0;
+  width: 300px;
+  height: 506px;
+  position: absolute;
+  top: 120%;
+  left: 25%;
+  border-radius: 20px;
+  border: 1px solid rgb(150, 5, 198);
+  background: linear-gradient(to top, rgb(81, 0, 108)  10%, black 40%);
+  backdrop-filter: blur(8px);
+}
+.obdelnik4 {
+  z-index: 0;
+  width: 300px;
+  height: 506px;
+  position: absolute;
+  top: 120%;
+  left: 45%;
+  border-radius: 20px;
+  border: 1px solid rgb(150, 5, 198);
+  background: linear-gradient(to top, rgb(81, 0, 108)  10%, black 40%);
+  backdrop-filter: blur(8px);
+}
+.popis {
+  position: absolute;
+  top: 143%;
+  left: 6.3%;
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgb(150, 5, 198);
+  -webkit-text-stroke: 0px;
+}
+.popis1 {
+  position: absolute;
+  top: 143%;
+  left: 25.45%;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: rgb(150, 5, 198);
+  -webkit-text-stroke: 0px;
+}
+.popis2 {
+  position: absolute;
+  top: 143%;
+  left: 49.4%;
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgb(150, 5, 198);
+  -webkit-text-stroke: 0px;
+}
+
+
+.container1 {
+  z-index: 99;
+  width: 800px;
+  height: 180px;
+  position: absolute;
+  top: 87%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+}
+.clock {
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.clock span {
+  font-size: 80px;
+  width: 110px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+.clock span::after {
+  font-size: 16px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#hrs::after {
+  content: 'HOURS';
+}
+#min::after {
+  content: 'MINS';
+}
+#sec::after {
+  content: 'SECS';
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap");
+
+.container4 {
+  position: absolute;
+  top: 48%;
+  left: 16%
+}
+
+.text4 {
+  
+  font-size: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &::after {
+    content: "|";
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 8px;
+    animation: blink 0.7s infinite alternate;
+  }
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}

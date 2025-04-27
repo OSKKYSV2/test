@@ -1,0 +1,577 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 328vh;
+    background: linear-gradient(to bottom, black 70%, rgb(40, 40, 40));
+    z-index: -2;
+  }
+  
+  /* particles background */
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* vzadu za obsahem */
+    top: 0;
+    left: 0;
+  }
+  
+  /* wave */
+  #wave {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* text animation */
+  .wrapper {
+    display: flex;
+    margin: 0 auto;
+    animation: slideDown 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* text styling */
+  .pad {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 4em;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    padding: 0px 25px;
+    font-family: 'Goldman', sans-serif;
+    letter-spacing: 3px;
+    margin: 150px auto 0px auto;
+  }
+  
+  .spin-Y > span {
+    animation: spin-y 3s ease infinite;
+  }
+  
+  @keyframes spin-y {
+    0%, 100% { transform: rotateY(0deg); }
+    70% { transform: rotateY(180deg) translateX(20px); }
+  }
+  
+  /* line under text */
+  hr {
+    border: none;
+    height: 3px;
+    width: 50%;
+    margin: 10px auto 0;
+    background: linear-gradient(to right, red, rgb(175, 175, 175), red);
+    opacity: 0;
+    transform: translateY(100px);
+    animation: slideUpLine 1s ease-out forwards;
+    animation-delay: 0s;
+  }
+  
+  @keyframes slideUpLine {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* typing text */
+  .typing-text {
+    color: rgb(163, 163, 163);
+    font-family: 'Goldman', sans-serif;
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* about me box */
+  .about-me-box {
+    margin-top: 700px;
+    background: rgb(0, 0, 0);
+    padding: 40px;
+    border-radius: 50px;
+    width: 95vw;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+    margin-left: auto;     /* <<< vystředí */
+  margin-right: auto;
+  }
+  
+  .about-me-box.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .about-me-box h2 {
+    font-family: 'Goldman', sans-serif;
+    color: red;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    
+    
+  }
+  
+  .about-me-box p {
+    font-family: 'Goldman', sans-serif;
+    color: rgb(165, 165, 165);
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  
+  .about-me-box:hover {
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+    transition: all 0.3s ease;
+  }
+  
+  .about-me-box:hover p {
+    color: rgb(220, 220, 220);
+    transition: all 1s ease;
+  }
+  
+  /* projects */
+  .projects-section {
+    margin-top: 300px;
+    text-align: center;
+  }
+  
+  .projects-section h2 {
+    font-family: 'Goldman', sans-serif;
+    color: red;
+    font-size: 36px;
+    margin-bottom: 10px;
+    opacity: 0; /* začíná skryté */
+    transform: translateY(20px); /* začíná dole */
+    animation: slideDown 1s ease-out forwards;
+    animation-delay: 0.3s; /* zpoždění animace */
+  }
+  
+  .projects-divider {
+    width: 1000px;
+    height: 4px;
+    background: red;
+    border: none;
+    margin: 0 auto 40px auto;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
+    margin-top: 50px;
+  }
+  
+  .card {
+    background: rgb(13, 12, 12);
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .card p {
+    margin: 5px 0;
+    font-family: 'Goldman', sans-serif;
+    font-size: 20px;
+    color: white;
+  }
+  
+  .card:hover {
+    background: transparent;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    transform: translateY(-5px);
+  }
+  
+  
+  
+  
+  .card p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+  }
+  
+  /* Když je karta vidět */
+  .card.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+  .card:hover {
+    background: transparent;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    transform: translateY(-5px);
+  }
+  
+  /* contact */
+  .contact-section {
+    margin-top: 200px;
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    font-family: 'Goldman', sans-serif;
+    color: red;
+    font-size: 36px;
+    margin-bottom: 10px;
+  
+    opacity: 0; /* schováme na začátku */
+    transform: translateY(20px); /* posun dolů */
+    animation: slideDown 1s ease-out forwards;
+    animation-delay: 0.3s; /* můžeš upravit, kdy se spustí */
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  .contact-divider {
+    width: 400px;
+    height: 4px;
+    background: red;
+    border: none;
+    margin: 0 auto 40px auto;
+  }
+  
+  .contact-info {
+    color: white;
+    font-family: 'Goldman', sans-serif;
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+  }
+  
+  .contact-info i {
+    color: red;
+    font-size: 24px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+  /* --- Tablet --- */
+@media (max-width: 991px) {
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 80%;
+    }
+  
+    .about-me-box {
+      width: 80%;
+    }
+  
+    .projects-section h2,
+    .contact-section h2 {
+      font-size: 28px;
+    }
+  }
+  
+  /* --- Mobil --- */
+  @media (max-width: 767px) {
+    .pad {
+      font-size: 2.5em;
+      letter-spacing: 2px;
+    }
+  
+    .typing-text {
+      font-size: 18px;
+    }
+  
+    .card {
+      width: 90%;
+      padding: 30px;
+    }
+  
+    .about-me-box {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .contact-info {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+  /* --- Větší monitory (FullHD 1920px a více) --- */
+  @media (min-width: 1400px) {
+    .about-me-box {
+      width: 90vw;    /* NE 50% */
+      max-width: 1600px;
+      padding: 60px;
+    }
+  }
+  
+  
+
+  
+    .projects-section h2,
+    .contact-section h2 {
+      font-size: 40px;
+    }
+  
+    .typing-text {
+      font-size: 28px;
+    }
+  
+    .pad {
+      font-size: 5em;
+      letter-spacing: 5px;
+    }
+  
+  
+  /* --- Obří obrazovky (4K 2560px+) --- */
+  @media (min-width: 2000px) {
+    .about-me-box {
+      width: 85vw;   /* NE 40% */
+      max-width: 1800px;
+    }
+  }
+  
+  
+    .card {
+      width: 350px;
+      padding: 40px 50px;
+      font-size: 28px;
+    }
+  
+    .cards {
+      gap: 70px;
+    }
+  
+    .projects-section h2,
+    .contact-section h2 {
+      font-size: 48px;
+    }
+  
+    .typing-text {
+      font-size: 32px;
+    }
+  
+    .pad {
+      font-size: 6em;
+      letter-spacing: 6px;
+    }
+  
+  
+
+
+  .card-link {
+    text-decoration: none; /* žádné podtržení */
+    color: inherit; /* zachová barvu textu */
+  }
+  
+  .card-link:hover {
+    color: inherit; /* při hoveru taky zachová barvu */
+  }
+
+
+
+
+
+
+
+
+  .skills-section {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; /* když je málo místa, půjdou pod sebe */
+    gap: 50px; /* mezery mezi kolečky */
+    padding: 0 100px; /* trochu prostoru zleva i zprava */
+  }
+  
+  
+
+
+
+  .skill {
+    position: relative;
+    margin: 40px;
+    width: 120px;
+    height: 160px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .outer {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .inner {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .percentage {
+    font-family: 'Goldman', sans-serif;
+    font-size: 24px;
+    color: white;
+  }
+  
+  .label {
+    font-family: 'Goldman', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Kroužek */
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg); /* začátek nahoře */
+  }
+  
+  .circle circle {
+    fill: none;
+    stroke-width: 10;
+  }
+  
+  .circle circle:first-child {
+    stroke: #111111; /* šedé pozadí */
+  }
+  
+  .circle .progress {
+    stroke: red;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 15; /* menší číslo = větší progress */
+    transition: stroke-dashoffset 1s ease;
+  }
+  
+  
+  .skills-wrapper {
+    margin-top: 250px; /* odsazení od vršku */
+    text-align: center;
+  }
+  
+  .skills-title {
+    font-family: 'Goldman', sans-serif;
+    color: red;
+    font-size: 46px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideDown 1s ease-out forwards;
+  }
+  
+  .skills-divider {
+    width: 400px;
+    height: 4px;
+    background: red;
+    border: none;
+    margin: 0 auto 60px auto;
+    opacity: 0;
+    transform: translateY(50px); /* začne dole */
+    animation: slideUpDivider 1s ease-out forwards;
+    
+  }
+  
+  @keyframes slideUpDivider {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+  @media (max-width: 991px) {
+    .card {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .card {
+      width: 90%;
+    }
+  
+    .card img {
+      height: 150px;
+    }
+  
+    .card p {
+      font-size: 18px;
+    }
+  }
+  
